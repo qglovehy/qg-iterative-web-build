@@ -12,6 +12,7 @@ const isProd = () => process.env.NODE_ENV === 'production';
 
 const resolve = (dir) => path.join(runtimePath, dir);
 
+const tsRegex = /\.(ts|tsx)$/;
 const svgRegex = /\.svg$/;
 const otherRegex = /\.(woff2?|ttf)$/;
 const jsRegex = /\.(js|mjs|jsx|ts|tsx)$/;
@@ -147,6 +148,19 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: babelConfig,
+          },
+        ],
+      },
+      // 处理 TS 文件
+      {
+        test: tsRegex,
+        exclude: moduleRegex,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile: resolve('tsconfig.json'), // 指定 TypeScript 配置文件
+            },
           },
         ],
       },

@@ -8,9 +8,6 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 const { merge } = require('webpack-merge');
 
-const tsRegex = /\.(ts|tsx)$/;
-const moduleRegex = /node_modules/;
-
 const runtimePath = process.cwd();
 
 const resolve = (dir) => path.join(runtimePath, dir);
@@ -32,23 +29,6 @@ const webpackConfig = merge(common, {
       filename: 'index.css', // 输出的 CSS 文件名
     }),
   ],
-  module: {
-    rules: [
-      // 处理 TS 文件
-      {
-        test: tsRegex,
-        exclude: moduleRegex,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              configFile: resolve('tsconfig.json'), // 指定 TypeScript 配置文件
-            },
-          },
-        ],
-      },
-    ],
-  },
   optimization: {
     // 是否需要压缩
     minimize: true,
