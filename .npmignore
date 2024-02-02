@@ -1,0 +1,9 @@
+coms-config/
+temp-config/
+node_modules/
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+.stylelintignore
+.stylelintrc.js
