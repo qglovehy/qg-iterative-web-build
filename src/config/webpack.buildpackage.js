@@ -50,10 +50,15 @@ const webpackConfig = merge(common, {
   },
   // 外部依赖，避免将某些 import 的包打包到 bundle 中
   externals: {
-    react: 'react', // React 作为外部依赖
-    'react-dom': 'react-dom',
-    '@ant-design/icons': '@ant-design/icons',
     antd: 'antd',
+    moment: 'moment',
+    classnames: 'classnames',
+    react: 'react',
+    'react-dom': 'react-dom',
+    'react-router-dom': 'react-router-dom',
+    '@ant-design/happy-work-theme': '@ant-design/happy-work-theme',
+    '@ant-design/icons': '@ant-design/icons',
+    'prop-types': 'prop-types',
   },
 });
 
