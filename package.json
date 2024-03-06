@@ -1,11 +1,11 @@
 {
   "name": "qgtools",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "bin": {
     "qgtools": "./bin/index.js"
   },
   "repository": "",
-  "description": "基于Webpack的自定义构建工具-内测中",
+  "description": "基于Webpack的自定义构建工具-内测中-已开源",
   "author": "qglove",
   "license": "MIT",
   "devDependencies": {
