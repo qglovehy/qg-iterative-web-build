@@ -15,7 +15,7 @@
 (8) CSS压缩，JS压缩，处理debugger、console、注释处理
 (9) 代码分割等等。
 
-目前雏形已经构建完毕
+目前雏形已经构建完毕 
 
 1.开启本地调试 `qgtools startapp`
 
