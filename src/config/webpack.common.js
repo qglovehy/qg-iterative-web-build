@@ -5,6 +5,7 @@ const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const { getPostCssConfigPath } = require('./util');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const runtimePath = process.cwd();
 
@@ -82,6 +83,8 @@ module.exports = {
       },
       version: Date.now(), // 将版本号传递给模板  防止index.html  图标和公共样式缓存
     }),
+    // 添加插件来处理生成的雪碧图
+    new SvgSpriteLoaderPlugin(),
     //import全局导入
     new webpack.ProvidePlugin({
       _: 'lodash',
@@ -130,6 +133,8 @@ module.exports = {
             loader: 'svg-sprite-loader',
             options: {
               symbolId: 'icon-[name]', // symbol id 格式
+              extract: true, // 开启提取到单独文件的功能
+              spriteFilename: 'svg-sprite.svg', // 设置生成的雪碧图文件名
             },
           },
         ],
