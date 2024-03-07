@@ -19,6 +19,7 @@ const webpackConfig = merge(common, {
     // clientLogLevel: 'none', // 不再输出繁琐的信息
   },
   plugins: [new ReactRefreshWebpackPlugin(), new webpack.HotModuleReplacementPlugin()],
+  //分割包
   optimization: {
     splitChunks: {
       chunks: 'all',
@@ -40,6 +41,12 @@ const webpackConfig = merge(common, {
           test: /[\\/]node_modules[\\/]echarts(-*)?[\\/]/,
           name: 'chunk-echarts',
           priority: 80,
+        },
+        // 公共组件库单独打包
+        'qg-react-components': {
+          test: /[\\/]node_modules[\\/]qg-react-components(-*)?[\\/]/,
+          name: 'chunk-qg-react-components',
+          priority: 60,
         },
         // 剩下node_modules单独打包
         libs: {
