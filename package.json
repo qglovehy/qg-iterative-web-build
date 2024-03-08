@@ -1,12 +1,15 @@
 {
   "name": "qgtools",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "bin": {
     "qgtools": "./bin/index.js"
   },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "npmqg",
   "repository": "",
   "description": "基于Webpack的自定义构建工具-内测中-已开源",
-  "author": "qglove",
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.19.1",
