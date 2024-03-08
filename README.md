@@ -15,6 +15,19 @@
 (8) CSS压缩，JS压缩，处理debugger、console、注释处理
 (9) 代码分割等等。
 
+示例项目展示：
+http://103.117.121.53:8001/
+
+示例项目源码（包含了构建工具源码、组件库源码）：
+https://gitee.com/qglove/qg-iterative-react-temp.git
+
+组件库源码(使用自定义构建工具打包)：
+https://gitee.com/qglove/qg-iterative-react-coms.git
+
+自定义构建工具源码：
+https://gitee.com/qglove/qg-iterative-web-build.git
+
+
 目前雏形已经构建完毕 
 
 1.开启本地调试 `qgtools startapp`

@@ -1,6 +1,6 @@
 {
   "name": "qgtools",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "bin": {
     "qgtools": "./bin/index.js"
   },
