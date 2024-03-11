@@ -50,6 +50,7 @@ const webpackConfig = merge(common, {
   },
   // 外部依赖，避免将某些 import 的包打包到 bundle 中
   externals: {
+    dayjs: 'dayjs',
     antd: 'antd',
     moment: 'moment',
     classnames: 'classnames',
