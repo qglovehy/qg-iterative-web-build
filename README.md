@@ -2,7 +2,7 @@
 
 支持构建`React TS公共组件`、`实际项目的本地调试`、`构建发布`
 
-1.0.22 设置入口文件为 index.ts
+1.0.24 修改组件库打包 map  => eval-cheap-module-source-map
 
 包含：
 (1) CSSModule
