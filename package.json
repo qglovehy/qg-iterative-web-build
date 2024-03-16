@@ -1,6 +1,6 @@
 {
   "name": "qgtools",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "bin": {
     "qgtools": "./bin/index.js"
   },
@@ -12,6 +12,7 @@
   "description": "基于Webpack的自定义构建工具-内测中-已开源",
   "license": "MIT",
   "devDependencies": {
+    "@types/npmlog": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@umijs/fabric": "^3.0.0",
     "eslint": "^8.23.1",

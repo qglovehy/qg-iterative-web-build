@@ -66,7 +66,7 @@ module.exports = {
   entry: resolve('src/main.js'),
   output: {
     path: isProd() ? resolve('dist') : void 0,
-    publicPath: '/', //上线后服务器文件夹路径可能需要调整
+    publicPath: '', //上线后服务器文件夹路径可能需要调整
     filename: isProd() ? 'js/[name].[contenthash:10].js' : 'js/[name].js',
     chunkFilename: isProd() ? 'js/[name].[contenthash:10].chunk.js' : 'js/[name].chunk.js',
     clean: true,
